@@ -20,9 +20,6 @@ _UUID_TO_COLOR: Final = {
     0xA495BB80C5B14B44B5121370F02D74DE: "Pink",
 }
 
-DEVICE_CLASS_SG: Final = "specific_gravity"
-UNITS_SG: Final = "G"
-
 
 class TiltBluetoothDeviceData(BluetoothData):
 
@@ -83,9 +80,9 @@ class TiltBluetoothDeviceData(BluetoothData):
             native_value=temperature,
         )
         self.update_sensor(
-            key=DEVICE_CLASS_SG,
-            device_class=DEVICE_CLASS_SG,
-            native_unit_of_measurement=UNITS_SG,
+            key=DeviceClass.SPECIFIC_GRAVITY,
+            device_class=DeviceClass.SPECIFIC_GRAVITY,
+            native_unit_of_measurement=Units.SPECIFIC_GRAVITY,
             native_value=specific_gravity,
         )
         self.update_sensor(
