@@ -49,8 +49,8 @@ def test_sps():
             ),
             DeviceKey(key="specific_gravity", device_id=None): SensorDescription(
                 device_key=DeviceKey(key="specific_gravity", device_id=None),
-                device_class="specific_gravity",
-                native_unit_of_measurement="G",
+                device_class=DeviceClass.SPECIFIC_GRAVITY,
+                native_unit_of_measurement=Units.SPECIFIC_GRAVITY,
             ),
             DeviceKey(key="temperature", device_id=None): SensorDescription(
                 device_key=DeviceKey(key="temperature", device_id=None),
