@@ -5,7 +5,7 @@ description = "Parser for Tilt BLE devices"
 authors = ["Alexander Thompson <thompson.p.alex@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/apt-itude/tilt-ble"
+repository = "https://github.com/Bluetooth-Devices/tilt-ble"
 documentation = "https://tilt-ble.readthedocs.io"
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
@@ -19,8 +19,8 @@ packages = [
 ]
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/apt-itude/tilt-ble/issues"
-"Changelog" = "https://github.com/apt-itude/tilt-ble/blob/main/CHANGELOG.md"
+"Bug Tracker" = "https://github.com/Bluetooth-Devices/tilt-ble/issues"
+"Changelog" = "https://github.com/Bluetooth-Devices/tilt-ble/blob/main/CHANGELOG.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"

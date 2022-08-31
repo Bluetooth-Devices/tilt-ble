@@ -1,14 +1,14 @@
 # Tilt BLE
 
 <p align="center">
-  <a href="https://github.com/apt-itude/tilt-ble/actions?query=workflow%3ACI">
-    <img src="https://img.shields.io/github/workflow/status/apt-itude/tilt-ble/CI/main?label=CI&logo=github&style=flat-square" alt="CI Status" >
+  <a href="https://github.com/Bluetooth-Devices/tilt-ble/actions?query=workflow%3ACI">
+    <img src="https://img.shields.io/github/workflow/status/Bluetooth-Devices/tilt-ble/CI/main?label=CI&logo=github&style=flat-square" alt="CI Status" >
   </a>
   <a href="https://tilt-ble.readthedocs.io">
     <img src="https://img.shields.io/readthedocs/tilt-ble.svg?logo=read-the-docs&logoColor=fff&style=flat-square" alt="Documentation Status">
   </a>
-  <a href="https://codecov.io/gh/apt-itude/tilt-ble">
-    <img src="https://img.shields.io/codecov/c/github/apt-itude/tilt-ble.svg?logo=codecov&logoColor=fff&style=flat-square" alt="Test coverage percentage">
+  <a href="https://codecov.io/gh/Bluetooth-Devices/tilt-ble">
+    <img src="https://img.shields.io/codecov/c/github/Bluetooth-Devices/tilt-ble.svg?logo=codecov&logoColor=fff&style=flat-square" alt="Test coverage percentage">
   </a>
 </p>
 <p align="center">
