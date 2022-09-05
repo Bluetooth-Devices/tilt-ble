@@ -37,7 +37,7 @@ class TiltBluetoothDeviceData(BluetoothData):
         try:
             data = manufacturer_data[76]
         except KeyError:
-            _LOGGER.warning("Manufacturer ID 76 not found in data")
+            _LOGGER.debug("Manufacturer ID 76 not found in data")
             return
 
         if data[0] != 0x02 or data[1] != 0x15:
