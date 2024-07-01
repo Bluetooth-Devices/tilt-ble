@@ -22,7 +22,6 @@ _UUID_TO_COLOR: Final = {
 
 
 class TiltBluetoothDeviceData(BluetoothData):
-
     """Data update for Tilt Bluetooth devices"""
 
     def _start_update(self, service_info: BluetoothServiceInfo) -> None:
