@@ -63,7 +63,7 @@ class TiltBluetoothDeviceData(BluetoothData):
 
         tilt_pro = minor >= 5000
 
-        # up the scale ra te if a tilt pro
+        # up the scale rate if a tilt pro
         temp_scalar = 10 if tilt_pro else 1
         grav_scalar = 10000 if tilt_pro else 1000
 
