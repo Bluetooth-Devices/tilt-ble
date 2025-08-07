@@ -61,11 +61,17 @@ class TiltBluetoothDeviceData(BluetoothData):
         if not changed_manufacturer_data:
             return
 
-        temperature = major
-        specific_gravity = minor / 1000
+        tilt_pro = minor >= 5000
+
+        # up the scale ra te if a tilt pro
+        temp_scalar = 10 if tilt_pro else 1
+        grav_scalar = 10000 if tilt_pro else 1000
+
+        temperature = major / temp_scalar
+        specific_gravity = minor / grav_scalar
 
         _LOGGER.debug(
-            "Tilt %s data: temp=%.2f, gravity=%.2f, power=%.2f",
+            "Tilt %s data: temp=%.3f, gravity=%.3f, power=%.2f",
             color,
             temperature,
             specific_gravity,
