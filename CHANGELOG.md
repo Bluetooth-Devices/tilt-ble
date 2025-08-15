@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+## v0.3.1 (2025-08-15)
+
+### Bug Fixes
+
+- Adjust device type/name for Pro models and add test
+  ([#47](https://github.com/Bluetooth-Devices/tilt-ble/pull/47),
+  [`7171ac3`](https://github.com/Bluetooth-Devices/tilt-ble/commit/7171ac367292a67d1776dbfc0c82b7af36df99f4))
+
+* fix: adjust device type/name for Pro models and add test
+
+* fix: line length
+
+
 ## v0.3.0 (2025-08-15)
 
 ### Chores
