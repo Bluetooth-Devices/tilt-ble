@@ -52,8 +52,6 @@ class TiltBluetoothDeviceData(BluetoothData):
             return
 
         self.set_device_manufacturer("Tilt")
-        self.set_device_type(color)
-        self.set_device_name(f"Tilt {color}")
 
         (major, minor, power) = unpack(">hhb", data[18:23])
 
@@ -62,6 +60,9 @@ class TiltBluetoothDeviceData(BluetoothData):
             return
 
         tilt_pro = minor >= 5000
+
+        self.set_device_type(f"Pro {color}" if tilt_pro else color)
+        self.set_device_name(f"Tilt Pro {color}" if tilt_pro else f"Tilt {color}")
 
         # up the scale rate if a tilt pro
         temp_scalar = 10 if tilt_pro else 1
