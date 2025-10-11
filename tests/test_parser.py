@@ -1,4 +1,4 @@
-from home_assistant_bluetooth import BluetoothServiceInfo
+from habluetooth import BluetoothServiceInfo
 from sensor_state_data import (
     DeviceClass,
     DeviceKey,
