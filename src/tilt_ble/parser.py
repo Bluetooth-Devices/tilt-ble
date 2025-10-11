@@ -3,7 +3,7 @@ from struct import unpack
 from typing import Final
 
 from bluetooth_sensor_state_data import BluetoothData
-from home_assistant_bluetooth import BluetoothServiceInfo
+from habluetooth import BluetoothServiceInfo
 from sensor_state_data import DeviceClass, Units
 
 _LOGGER = logging.getLogger(__name__)
