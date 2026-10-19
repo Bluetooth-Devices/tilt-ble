@@ -53,7 +53,7 @@ class TiltBluetoothDeviceData(BluetoothData):
 
         self.set_device_manufacturer("Tilt")
 
-        (major, minor, power) = unpack(">hhb", data[18:23])
+        major, minor, power = unpack(">hhb", data[18:23])
 
         changed_manufacturer_data = self.changed_manufacturer_data(service_info)
         if not changed_manufacturer_data:
