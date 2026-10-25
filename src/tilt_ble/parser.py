@@ -39,6 +39,14 @@ class TiltBluetoothDeviceData(BluetoothData):
             _LOGGER.debug("Manufacturer ID 76 not found in data")
             return
 
+        # A valid Tilt iBeacon frame is 23 bytes (0x02 0x15, 16-byte UUID,
+        # major, minor, tx power). A shorter manufacturer-data payload would
+        # make the fixed-size reads below raise IndexError/struct.error, so
+        # ignore it instead of letting the exception propagate.
+        if len(data) < 23:
+            _LOGGER.debug("Tilt iBeacon payload too short: %s", data.hex())
+            return
+
         if data[0] != 0x02 or data[1] != 0x15:
             _LOGGER.debug("Wrong subtype or subtype length for Tilt iBeacon")
             return

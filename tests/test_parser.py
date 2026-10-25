@@ -141,3 +141,37 @@ def test_pro():
             ),
         },
     )
+
+
+def test_short_advertisement_does_not_crash():
+    """A truncated iBeacon frame must be ignored, not raise.
+
+    A manufacturer-data 76 payload shorter than a full 23-byte Tilt iBeacon
+    frame (e.g. a malformed or spoofed advertisement) previously reached
+    ``unpack(">hhb", data[18:23])`` with fewer than 5 bytes and raised an
+    unhandled ``struct.error``. It should now return an empty update.
+    """
+    parser = TiltBluetoothDeviceData()
+    # Valid Green prefix (0x02 0x15 + 16-byte UUID) truncated before the
+    # major/minor/tx-power triple.
+    service_info = BluetoothServiceInfo(
+        name="aa-bb-cc-dd-ee-ff",
+        manufacturer_data={
+            76: b"\x02\x15\xa4\x95\xbb \xc5\xb1KD\xb5\x12\x13p\xf0-t\xde"
+        },
+        service_uuids=[],
+        address="aa:bb:cc:dd:ee:ff",
+        rssi=-60,
+        service_data={},
+        source="local",
+    )
+    result = parser.update(service_info)
+    assert result == SensorUpdate(
+        title=None,
+        devices={},
+        entity_descriptions={},
+        entity_values={},
+        binary_entity_descriptions={},
+        binary_entity_values={},
+        events={},
+    )
